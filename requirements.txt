@@ -1,0 +1,41 @@
+# ==========================================
+# 1. Web Frameworks & Servers
+# ==========================================
+fastapi
+uvicorn[standard]
+Flask
+Flask-CORS
+pydantic
+
+# ==========================================
+# 2. Database, Caching & Background Tasks
+# ==========================================
+SQLAlchemy
+psycopg2-binary
+alembic
+redis
+celery
+qdrant-client
+
+# ==========================================
+# 3. AI & Machine Learning (LLM & Audio)
+# ==========================================
+torch
+transformers
+accelerate
+pyannote.audio
+
+# ==========================================
+# 4. External APIs, WebRTC & Utilities
+# ==========================================
+aiortc
+websockets
+soniox
+elevenlabs
+python-dotenv
+requests
+
+
+sounddevice
+numpy
+scipy
