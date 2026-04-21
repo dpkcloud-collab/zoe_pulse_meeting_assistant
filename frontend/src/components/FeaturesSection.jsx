@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import { FileText, Bot, Users, ClipboardList, Globe, Search } from 'lucide-react';
+import { FileText, Bot, Users, ClipboardList, Globe, Search, ArrowRight, Sparkles } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function FeaturesSection({ t }) {
+  const navigate = useNavigate();
   const features = [
     {
       key: 'realtime',
@@ -70,6 +72,27 @@ export default function FeaturesSection({ t }) {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zoe-gold/5 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Get Started CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <motion.button
+            onClick={() => navigate('/dashboard')}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(16, 185, 129, 0.4)' }}
+            whileTap={{ scale: 0.97 }}
+            className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-zoe-emerald to-emerald-600 text-white font-semibold text-lg shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 cursor-pointer"
+          >
+            <Sparkles className="w-5 h-5" />
+            Get Started
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-zoe-emerald to-emerald-600 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+          </motion.button>
+        </motion.div>
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

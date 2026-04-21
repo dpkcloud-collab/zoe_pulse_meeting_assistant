@@ -22,3 +22,8 @@ dist/
 node_modules/
 
 .env
+presentation/
+presentation.pptx
+presentation.zip
+
+.vscode
