@@ -6,6 +6,8 @@ uvicorn[standard]
 Flask
 Flask-CORS
 pydantic
+python-multipart
+httpx
 
 # ==========================================
 # 2. Database, Caching & Background Tasks
@@ -31,7 +33,7 @@ pyannote.audio
 aiortc
 websockets
 soniox
-elevenlabs
+deepgram-sdk
 python-dotenv
 requests
 
